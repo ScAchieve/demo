@@ -1,6 +1,6 @@
 " Set GUI font
 GuiFont! IBM 3270:h20:b
-
+set columns 90 lines 20
 
 let s:fontsize = 16
 function! AdjustFontSize(amount)

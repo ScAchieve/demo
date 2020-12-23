@@ -30,7 +30,7 @@ set autochdir
 "set colorcolumn=81
 "set spell
 "set list
-filetype plugin on
+"filetype plugin on
 " No show preview window for completion
 set completeopt-=preview
 
@@ -79,10 +79,10 @@ let mapleader = "\<Space>"
 map <S-F1> :WhichKey '<Space>'<CR>
 
 "sc
-set columns=50
-set lines=23
+set columns=80
+set lines=27
 set encoding=utf-8
-set fencs =ucs-bom,utf8,default,gbk,latin1 
+set fencs=ucs-bom,utf8,default,gbk,latin1 
 
 set clipboard+=unnamedplus
 set scrolloff=4
@@ -113,7 +113,8 @@ let g:multi_cursor_quit_key            = '<Esc>'
 "insert mode input aa  output foo
 "iunmap aa  
 "del aa
-"
+imap sc +-+
+"inoremap <silent> <leader><space>s <esc>/+-+<cr>v3ls
 "
 " Startify
 let g:startify_lists = [
@@ -151,7 +152,9 @@ nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <leader>rn <Plug>(coc-rename)
 
-nnoremap <silent> ft :set guifont=IBM\ 3270:h20<cr>
+"nnoremap <silent> ft :set guifont=IBM\ 3270:h20<cr>
+nnoremap <silent> ft :set columns=24<cr> 
+"lines=12<cr>
 "==================== Plugin manager ====================
 "-------- Specify a directory for plugins --------
 call plug#begin('~/AppData/Local/nvim/plugged')
